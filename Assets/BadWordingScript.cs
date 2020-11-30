@@ -16,7 +16,7 @@ public class BadWordingScript : MonoBehaviour
     public TextMesh[] ButtonText;
     
     string[][] ManiaString = new string[][]{
-        new string[] {"HIM’S", "THIS", "YOUR", "MY", "HER", "THAT", "HIS", "HER’S", "YOUR", "OUR"},
+        new string[] {"HIM’S", "THIS", "YOUR", "MY", "HER", "THAT", "HIS", "HER’S", "THEIR", "OUR"},
         new string[] {"PHRASE", "SENTENCE", "NUMBER", "MANUAL", "WIRE", "THING", "BUTTON", "WORD", "MODULE", "BOMB"},
         new string[] {"BEEN", "AM", "WERE", "DO", "AMN’T", "ARE", "WON’T", "IS", "WILL", "BE"},
         new string[] {"YES", "OK", "OFF", "ON", "OKAY", "UHHH", "NO", "HABERDASHERY", "OH", "DONE"},
