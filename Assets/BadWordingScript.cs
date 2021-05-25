@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using KModkit;
 using System.Text.RegularExpressions;
 
 public class BadWordingScript : MonoBehaviour
@@ -51,7 +48,7 @@ public class BadWordingScript : MonoBehaviour
     void ButtonPress(int Press)
     {
         Buttons[Press].AddInteractionPunch(0.2f);
-        Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+        Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, Buttons[Press].transform);
         if (!ModuleSolved)
         {
             if ((Press + 1) == Additive)
@@ -190,4 +187,10 @@ public class BadWordingScript : MonoBehaviour
 			Buttons[Int32.Parse(parameters[1]) - 1].OnInteract();
         }
 	}
+
+    IEnumerator TwitchHandleForcedSolve()
+    {
+        yield return null;
+        Buttons[Additive - 1].OnInteract();
+    }
 }
